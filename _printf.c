@@ -13,6 +13,8 @@ int _printf(const char *format, ...)
 	char *temp;
 	va_list ap;
 
+	if (!format)
+		return (0);
 	va_start(ap, format);
 	for (; format[i]; i++)
 	{
@@ -36,6 +38,7 @@ int _printf(const char *format, ...)
 					sum++;
 					break;
 				default:
+					_putchar('%');
 					_putchar(format[i]);
 					sum++;
 					break;

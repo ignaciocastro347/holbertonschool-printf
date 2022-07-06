@@ -7,7 +7,10 @@
 
 int main(void)
 {
-/*	printf("%d", _putchar_s("ssssssss"));*/
-	printf("%d", _printf("a%sja%%ha\nvico%c%", NULL, 't'));
+	_printf(NULL);
+	printf("\n");
+	_printf("%");
+	_printf("%!\n");
+	_printf("%K\n");
 	return (0);
 }

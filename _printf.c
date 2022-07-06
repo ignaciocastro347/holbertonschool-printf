@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 
 	if (!format)
-		return (0);
+		return (-1);
 	va_start(ap, format);
 	for (; format[i]; i++)
 	{
@@ -22,6 +22,8 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (!format[i])
+				if (i == 1)
+					return (-1);
 				break;
 			switch (format[i])
 			{
@@ -40,7 +42,7 @@ int _printf(const char *format, ...)
 				default:
 					_putchar('%');
 					_putchar(format[i]);
-					sum++;
+					sum += 2;
 					break;
 			}
 		}

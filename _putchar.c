@@ -21,7 +21,8 @@ int _putchar(char c)
 int _putchar_s(char *s)
 {
 	int i = 0;
+
 	for (; s[i]; i++)
 		_putchar(s[i]);
-	return(i);
+	return (i);
 }

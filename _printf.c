@@ -6,16 +6,16 @@
  * @format: string value to print and specify type of next args
  * Return: amount of printed character
  */
-
 int _printf(const char *format, ...)
 {
 	int i = 0, sum = 0;
 	char *temp;
-	va_list ap;
+	va_list list;
+	int (*pr)(va_list);
 
 	if (!format)
 		return (-1);
-	va_start(ap, format);
+	va_start(list, format);
 	for (; format[i]; i++)
 	{
 		if (format[i] == '%')
@@ -27,25 +27,14 @@ int _printf(const char *format, ...)
 					return (-1);
 				break;
 			}
-			switch (format[i])
+			pr = get_print_function(format[i]);
+			if (pr)
+				sum += pr(list);
+			else
 			{
-				case 'c':
-					_putchar(va_arg(ap, int));
-					sum++;
-					break;
-				case 's':
-					temp = va_arg(ap, char*);
-					sum += _putchar_s(temp ? temp : "(null)");
-					break;
-				case '%':
-					_putchar('%');
-					sum++;
-					break;
-				default:
-					_putchar('%');
-					_putchar(format[i]);
-					sum += 2;
-					break;
+				_putchar("%");
+				_putchar(format[i]);
+				sum += 2;
 			}
 		}
 		else

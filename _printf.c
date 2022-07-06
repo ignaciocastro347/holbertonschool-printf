@@ -22,9 +22,11 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (!format[i])
+			{
 				if (i == 1)
 					return (-1);
 				break;
+			}
 			switch (format[i])
 			{
 				case 'c':

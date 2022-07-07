@@ -7,9 +7,7 @@
 
 int main(void)
 {
-	_printf(NULL);
-	_printf("%");
-	_printf("%!\n");
-	_printf("%K\n");
+	_printf("jhfksuhs %d", 1000);
+	printf("%d\n",_printf("kfehalekh %i", 2222));
 	return (0);
 }

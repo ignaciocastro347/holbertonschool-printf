@@ -19,6 +19,8 @@ typedef struct print_function
 int print_char(va_list);
 int print_string(va_list);
 int print_percent(va_list);
+int print_decimal(va_list);
+int recursive_decimal(int, int);
 int (*get_print_function(char a))(va_list);
 #endif
 

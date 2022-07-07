@@ -9,6 +9,8 @@ int (*get_print_function(char a))(va_list)
 	pfunc_t map[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'i', print_decimal},
+		{'d', print_decimal},
 		{'%', print_percent},
 		{'\0', '\0'}
 	};

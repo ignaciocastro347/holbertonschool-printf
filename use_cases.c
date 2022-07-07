@@ -35,3 +35,29 @@ int print_percent(va_list list)
 	_putchar('%');
 	return (1);
 }
+/**
+ *recursive_decimal - prints a decimal recursively
+ *@n: decimal
+ *@sum: counter
+ *Return: the amount of decimal numbers
+ */
+int recursive_decimal(int n, int sum)
+{
+	if (n > 9)
+	{
+		sum = recursive_decimal(n / 10, sum);
+		_putchar((n % 10) + '0');
+	}
+	else
+		_putchar(n + '0');
+	return (sum + 1);
+}
+/**
+ *print_decimal - prints a decimal
+ *@list: va_list value
+ *Return: the amount of decimal numbers
+ */
+int print_decimal(va_list list)
+{
+	return (recursive_decimal(va_arg(list, int), 0));
+}

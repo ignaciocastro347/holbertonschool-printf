@@ -8,7 +8,6 @@
 int main(void)
 {
 	_printf(NULL);
-	printf("\n");
 	_printf("%");
 	_printf("%!\n");
 	_printf("%K\n");

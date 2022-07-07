@@ -1,11 +1,12 @@
 #ifndef PRINTF_H
 #define PRINTF_H
+#include <stdio.h>
 int _putchar(char);
 int _putchar_s(char *s);
 int _printf(const char *format, ...);
 
 /**
- *print_function - Struct print
+ *struct print_function - Struct print
  *@c: The format specification
  *@f: The function associated
  */

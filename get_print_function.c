@@ -1,16 +1,16 @@
 #include "main.h"
 /**
  *get_print_function - map each format specification with a function
- *@c - char value
- *Returns: pointer to function
+ *@a: char value
+ *Return: pointer to function
 */
 int (*get_print_function(char a))(va_list)
 {
 	pfunc_t map[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'%', print_percentage},
-		{NULL, NULL}
+		{'%', print_percent},
+		{'\0', '\0'}
 	};
 	int i;
 

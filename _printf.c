@@ -9,7 +9,6 @@
 int _printf(const char *format, ...)
 {
 	int i = 0, sum = 0;
-	char *temp;
 	va_list list;
 	int (*pr)(va_list);
 
@@ -32,7 +31,7 @@ int _printf(const char *format, ...)
 				sum += pr(list);
 			else
 			{
-				_putchar("%");
+				_putchar('%');
 				_putchar(format[i]);
 				sum += 2;
 			}
@@ -43,6 +42,6 @@ int _printf(const char *format, ...)
 			sum++;
 		}
 	}
-	va_end(ap);
+	va_end(list);
 	return (sum);
 }

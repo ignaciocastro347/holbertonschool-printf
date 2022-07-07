@@ -41,8 +41,14 @@ int print_percent(va_list list)
  *@sum: counter
  *Return: the amount of decimal numbers
  */
-int recursive_decimal(int n, int sum)
+int recursive_decimal(long int n, int sum)
 {
+	if (n < 0)
+	{
+		n = n * -1;
+		_putchar('-');
+		sum++;
+	}
 	if (n > 9)
 	{
 		sum = recursive_decimal(n / 10, sum);
@@ -59,5 +65,5 @@ int recursive_decimal(int n, int sum)
  */
 int print_decimal(va_list list)
 {
-	return (recursive_decimal(va_arg(list, int), 0));
+	return (recursive_decimal(va_arg(list, long int), 0));
 }

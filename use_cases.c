@@ -36,21 +36,22 @@ int print_percent(va_list list)
 	return (1);
 }
 /**
- *recursive_decimal - prints a decimal recursively
- *@n: decimal
- *Return: the amount of decimal numbers
+ * ve_decimal - prints a decimal recursively
+ * @n: decimal
+ * @base: base
+ * Return: the amount of decimal numbers
  */
-int recursive_decimal(unsigned int n)
+int recursive_number(unsigned int n, unsigned int base, char* digits)
 {
 	int sum;
 
-	if (n > 9)
+	if (n > (base - 1))
 	{
-		sum = recursive_decimal(n / 10);
-		_putchar((n % 10) + '0');
+		sum = recursive_number(n / base, base, digits);
+		_putchar(digits[n % base]);
 		return (sum + 1);
 	}
-	_putchar(n + '0');
+	_putchar(digits[n]);
 	return (1);
 }
 /**
@@ -61,11 +62,14 @@ int recursive_decimal(unsigned int n)
 int print_decimal(va_list list)
 {
 	int n = va_arg(list, int);
+	int amount = 0;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		return (recursive_decimal((unsigned int)(n * -1)) + 1);
+		amount++;
+		n = n * -1;
 	}
-	return (recursive_decimal((unsigned int)n));
+	amount += recursive_number((unsigned int)(n), 10, "0123456789");
+	return (amount);
 }

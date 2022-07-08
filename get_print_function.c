@@ -11,9 +11,11 @@ int (*get_print_function(char a))(va_list)
 		{'s', print_string},
 		{'i', print_decimal},
 		{'d', print_decimal},
+		{'u', print_unsigned_decimal},
 		{'b', print_binary},
 		{'o', print_octal},
 		{'x', print_hex},
+		{'X', print_upper_hex},
 		{'%', print_percent},
 		{'\0', '\0'}
 	};

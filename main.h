@@ -17,15 +17,23 @@ typedef struct print_function
 	int (*f)(va_list);
 } pfunc_t;
 
+/*############### MAP FUNCTION #################*/
+int (*get_print_function(char a))(va_list);
+
+/* ################ USE CASES ################# */
 int print_char(va_list);
 int print_string(va_list);
 int print_percent(va_list);
 int print_decimal(va_list);
+int print_unsigned_decimal(va_list);
 int print_binary(va_list);
 int print_octal(va_list);
 int print_hex(va_list);
+int print_upper_hex(va_list);
+
+/* ################## UTILS ################### */
 int recursive_number(unsigned int, unsigned int, char *);
-int (*get_print_function(char a))(va_list);
+unsigned int make_abs(int);
 #endif
 
 

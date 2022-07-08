@@ -24,5 +24,14 @@ int print_octal(va_list list)
  */
 int print_hex(va_list list)
 {
+	return (recursive_number(va_arg(list, int), 16, "0123456789abcdef"));
+}
+/**
+ *print_upper_hex - print a hexadecimal number with uppercase letters
+ * @list: va_list value
+ * Return: the amount of hexadecimal numbers
+ */
+int print_upper_hex(va_list list)
+{
 	return (recursive_number(va_arg(list, int), 16, "0123456789ABCDEF"));
 }

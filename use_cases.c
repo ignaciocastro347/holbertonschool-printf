@@ -61,9 +61,7 @@ int print_decimal(va_list list)
  */
 int print_unsigned_decimal(va_list list)
 {
-	int n = va_arg(list, int);
+	unsigned int n = va_arg(list, unsigned int);
 
-	if (n < 0)
-		n = n * -1;
-	return(recursive_number((unsigned int)(n), 10, "0123456789"));
+	return(recursive_number(n, 10, "0123456789"));
 }

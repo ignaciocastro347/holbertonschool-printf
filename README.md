@@ -4,10 +4,10 @@ In this project we are going to create our own printf function that works the sa
 
 ## Function Prototype
 
-==int _printf(const char *format, ...)==
+__int _printf(const char *format, ...)__
 
-**format**: the constant character string.
-**...**: indicates the variable number of arguments.
+__format__: the constant character string.
+__...__: indicates the variable number of arguments.
 
 ### Libraries
 
@@ -35,15 +35,25 @@ As mentioned above with printf we can print different data type. This happens wh
 | Operator | Format |
 
 | ------ | ------ |
+
 | %c | is used for printing a character |
+
 | %s | is used for printing a string |
+
 | %d | is used for printing a decimal number |
-| %i | is used for printing a integer base 10 |
+
+| %i | is used for printing an integer base 10 |
+
 | %u | is used for printing an unsigned decimal |
+
 | %b | is used for printing a binary |
+
 | %o | is used for printing an octal |
+
 | %x | is used for printing a hexadecimal |
+
 | %X | is used for printing an uppercase hexadecimal |
+
 | %% | is used for printing a percent sign |
 
 Ex:

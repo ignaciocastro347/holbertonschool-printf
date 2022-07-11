@@ -4,7 +4,7 @@ In this project we are going to create our own printf function that works the sa
 
 ## Function Prototype
 
-***int _printf(const char *format, ...)***
+***int _printf(const char '*'format, ...)***
 
 __format__: the constant character string.
 
@@ -20,7 +20,7 @@ To compile our files we used the gcc compiler.
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ```
 
-And to test our _printf we added the ==-Wno-format== flag.
+And to test our _printf we added the __-Wno-format__ flag.
 
 ## printf function
 

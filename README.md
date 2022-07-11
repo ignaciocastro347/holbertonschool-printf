@@ -4,7 +4,7 @@ In this project we are going to create our own printf function that works the sa
 
 ## Function Prototype
 
-***int _printf(const char '*'format, ...)***
+==int _printf(const char *format, ...)==
 
 __format__: the constant character string.
 
@@ -44,7 +44,7 @@ As mentioned above with printf we can print different data type. This happens wh
 | %X | is used for printing an uppercase hexadecimal |
 | %% | is used for printing a percent sign |
 
-Ex:
+For example:
 
 ```sh
 int main(void){

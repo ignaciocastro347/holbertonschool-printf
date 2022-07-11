@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * recursive_decimal - prints a decimal recursively
+ * recursive_number - prints a number recursively
  * @n: decimal
  * @base: base
  * @digits: string with digits to use

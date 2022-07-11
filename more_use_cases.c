@@ -10,7 +10,7 @@ int print_binary(va_list list)
 }
 /**
  * print_octal - print a octal number
- * @n: number
+ * @list: va_list value
  * Return: the amount of octal numbers
  */
 int print_octal(va_list list)

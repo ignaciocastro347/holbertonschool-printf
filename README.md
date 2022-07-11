@@ -59,10 +59,7 @@ Output: I'm 20 years old.
 
 Here we'll show the printf source code in a graphical way.
 
-
-
-
-
+![Flowchart](https://firebasestorage.googleapis.com/v0/b/aroma-s.appspot.com/o/Untitled%20Diagram-Page-2%20(1).jpg?alt=media&token=3cf8b4e2-caa9-414d-ac4b-60b25346cf65)
 
 ### Contributors
 

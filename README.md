@@ -4,7 +4,7 @@ In this project we are going to create our own printf function that works the sa
 
 ## Function Prototype
 
-==int _printf(const char *format, ...)==
+__int _printf(const char *format, ...)__
 
 __format__: the constant character string.
 
